@@ -1,0 +1,1 @@
+alter table doctor add active TINYINT not NULL DEFAULT 1;
