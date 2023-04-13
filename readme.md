@@ -1,1 +1,1 @@
-# Projeto exemplo de spring do curso de spring boot da alura
+# Projeto de exemplo de spring do curso de spring boot da alura
