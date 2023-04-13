@@ -1,4 +1,4 @@
-package med.voll.api.model.dto;
+package med.voll.api.domain.doctor;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

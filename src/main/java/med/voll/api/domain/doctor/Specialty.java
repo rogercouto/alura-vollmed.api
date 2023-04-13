@@ -1,6 +1,4 @@
-package med.voll.api.model;
-
-import med.voll.api.model.dto.SpecialtyData;
+package med.voll.api.domain.doctor;
 
 public enum Specialty {
 

@@ -1,10 +1,9 @@
-package med.voll.api.model;
+package med.voll.api.domain.doctor;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
-import med.voll.api.model.dto.DoctorCreateData;
-import med.voll.api.model.dto.DoctorUpdateData;
+import med.voll.api.domain.common.Address;
 
 @Table(name = "doctor")
 @Entity(name = "Doctor")

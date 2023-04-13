@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ErrorHandler {
 
     @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity handeEntityNotFountException() {
+    public ResponseEntity<?> handeEntityNotFountException() {
         return ResponseEntity.notFound().build();
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+    public ResponseEntity<?> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         var fieldErrors = e.getFieldErrors();
         var validationErrors = fieldErrors.stream().map(DataValidationError::new).toList();
         return ResponseEntity.badRequest().body(validationErrors);
@@ -27,6 +27,11 @@ public class ErrorHandler {
         public DataValidationError(FieldError fieldError) {
             this(fieldError.getField(), fieldError.getDefaultMessage());
         }
+    }
+
+    @ExceptionHandler(DataValidationException.class)
+    public ResponseEntity<?> handleDataValidationException(DataValidationException e) {
+        return ResponseEntity.badRequest().body(e.getMessage());
     }
 
 }

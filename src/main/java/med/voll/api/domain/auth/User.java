@@ -1,4 +1,4 @@
-package med.voll.api.model;
+package med.voll.api.domain.auth;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

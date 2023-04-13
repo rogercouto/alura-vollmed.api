@@ -1,6 +1,4 @@
-package med.voll.api.model.dto;
-
-import med.voll.api.model.Doctor;
+package med.voll.api.domain.doctor;
 
 public record DoctorListData(
     Long id,

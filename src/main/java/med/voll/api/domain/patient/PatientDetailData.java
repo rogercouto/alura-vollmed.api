@@ -1,7 +1,6 @@
-package med.voll.api.model.dto;
+package med.voll.api.domain.patient;
 
-import med.voll.api.model.Address;
-import med.voll.api.model.Patient;
+import med.voll.api.domain.common.AddressData;
 
 public record PatientDetailData(
     Long id,

@@ -1,8 +1,7 @@
-package med.voll.api.model.dto;
+package med.voll.api.domain.common;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
-import med.voll.api.model.Address;
 
 public record AddressData(
     @NotBlank String street,

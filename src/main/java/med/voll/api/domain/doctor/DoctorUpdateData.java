@@ -1,4 +1,6 @@
-package med.voll.api.model.dto;
+package med.voll.api.domain.doctor;
+
+import med.voll.api.domain.common.AddressData;
 
 public record DoctorUpdateData(
     String name,

@@ -1,13 +1,14 @@
 package med.voll.api.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.voll.api.model.Doctor;
-import med.voll.api.model.dto.DoctorDetailData;
-import med.voll.api.model.dto.DoctorCreateData;
-import med.voll.api.model.dto.DoctorUpdateData;
-import med.voll.api.model.dto.DoctorListData;
+import med.voll.api.domain.doctor.Doctor;
+import med.voll.api.domain.doctor.DoctorDetailData;
+import med.voll.api.domain.doctor.DoctorCreateData;
+import med.voll.api.domain.doctor.DoctorUpdateData;
+import med.voll.api.domain.doctor.DoctorListData;
 import med.voll.api.repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -19,6 +20,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/doctor")
+@SecurityRequirement(name = "bearer-key")
 public class DoctorController {
 
     @Autowired
